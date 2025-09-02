@@ -1,6 +1,6 @@
-const { get } = require('http')
+const http = require('http')
 
-get('http://www.google.com',(res) => {  // replace the URL 'http://www.google.com' with your desired URL.
+const req = http.request('http://www.google.com',(res) => {
     res.on('data',(chunk) => {
         console.log(`Data is chunk : ${chunk}`);
     });
